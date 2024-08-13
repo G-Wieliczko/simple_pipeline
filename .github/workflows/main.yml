@@ -1,4 +1,4 @@
-name: NPM Install and Manual Trigger Workflow
+ name: Workflows trigger
 
 on:
   workflow_dispatch:
@@ -14,10 +14,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Możesz dostosować wersję Node.js do swojej potrzeby
+        node-version: '14'
 
     - name: Install dependencies
       run: npm install
 
     - name: Run additional scripts
-      run: echo "Manual trigger has executed the npm install."
+      run: echo "Manual trigger works."
