@@ -1,6 +1,7 @@
-name: Pipeline run
+name: NPM Install and Manual Trigger Workflow
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
   install:
@@ -13,10 +14,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20' 
+        node-version: '14' # Możesz dostosować wersję Node.js do swojej potrzeby
 
     - name: Install dependencies
       run: npm install
 
     - name: Run additional scripts
-      run: echo "Manual trigger"
+      run: echo "Manual trigger has executed the npm install."
